@@ -3,3 +3,63 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+a {
+    text-decoration: none;
+    color: currentColor
+}
+
+img {
+    max-width: 100%;
+}
+
+ul, ol, li {
+    list-style: none
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;700&display=swap');
+
+
+:root {
+    --library-color: rgba(20, 25, 34, 1);
+    --header-color: black;
+    --toolbar-color: rgba(40, 40, 40, 1);
+}
+
+/* MAIN LAYOUT */
+
+body {
+    font-family: 'Kanit';
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-section {
+    background-color: var(--library-color);
+    flex-grow: 1;
+    display: flex;
+}
+
+.library {
+    background-color: var(--library-color);
+    flex-basis: 100%;
+}
+
+.toolbar {
+    background-color: var(--toolbar-color);
+    padding: 2rem 0;
+}
+
+.sidebar {
+    background-color: var(--header-color);
+    flex-basis: 230px;
+}
+
+.library .header-library {
+    width: 100%;
+    padding: 2rem 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
