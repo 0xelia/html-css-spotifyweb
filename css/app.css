@@ -24,7 +24,19 @@ ul, ol, li {
     --library-color: rgba(20, 25, 34, 1);
     --header-color: black;
     --toolbar-color: rgba(40, 40, 40, 1);
+    --bar-padding: 1rem;
 }
+
+/* UTILITY */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-direction: column;
+}
+
 
 /* MAIN LAYOUT */
 
@@ -56,6 +68,10 @@ body {
 .sidebar {
     background-color: var(--header-color);
     flex-basis: 230px;
+    flex-shrink: 0;
+    padding: var(--bar-padding);
+    font-size: 1rem;
+    line-height: 1.4rem;
 }
 
 .library .header-library {
@@ -63,3 +79,81 @@ body {
     padding: 2rem 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+/* SIDEBAR */
+
+.sidebar .logo {
+    max-width: 160px;
+}
+
+.sidebar .row {
+    height: 100%;
+}
+
+.sidebar .col {
+    flex-basis: 100%;
+}
+
+.sidebar .col:last-child {
+    align-self: flex-end;
+}
+
+/* navbar della sidebar (header) */
+.sidebar .nav {
+    padding-bottom: 1.2rem; /*si va a sommare al padding di .nav .li che è di 0.8rem per un totale di 2 rem */
+}
+
+.sidebar .nav li {
+    padding: 0.8rem 0;
+}
+.sidebar i {
+    display: inline-block;
+    height: 1.4rem;
+    aspect-ratio: 1;
+    vertical-align: middle;
+}
+
+.sidebar .nav li:first-child {
+    position: relative;
+}
+
+.sidebar .nav li:first-child ::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1rem;
+    height: 22px;
+    width: 3px;
+    background-color: greenyellow;
+}
+
+/* playlist della sidebar */
+
+.playlist h4 {
+    padding-bottom: 0.5rem;
+}
+
+.create-list {
+    margin-bottom: 1.2rem;
+}
+
+.create-list i {
+    color: black;
+    background-color: #A3A3A3;
+    height: 1.8rem;
+    aspect-ratio: 1;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-right: 0.5rem;
+}
+
+.list-playlist li {
+    padding: 0.5rem 0;
+}
+
+.download img {
+    height: 22px;
+    aspect-ratio: 1;
+}
+
