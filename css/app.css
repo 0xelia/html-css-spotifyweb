@@ -47,6 +47,14 @@ ul, ol, li {
     justify-content: center;
 }
 
+.section-title {
+    color: white;
+    font-size: 1.5rem;
+    padding: var(--bar-padding) 0;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
 /* MAIN LAYOUT */
 
 body {
@@ -264,10 +272,10 @@ body {
     align-items: center;
 }
 
-.track .track-name strong {
+.track-name strong {
     margin-bottom: 0;
 }
-.track .track-name span{
+.track-name span{
     font-size: 0.8rem;
     color: var(--lighgrey-spotify);
 }
@@ -386,6 +394,10 @@ body {
     }
 }
 
+.library-main {
+    padding: 0 var(--bar-padding);
+}
+
 .menu-section .nav {
     padding-top: var(--bar-padding);
     flex-basis: 100%;
@@ -407,4 +419,16 @@ body {
     width: 50%;
     background-color: lightgreen;
     margin: 0.5rem auto;
+}
+
+.main-section .library-main  section .row {
+    gap: 0.8rem;
+}
+
+.thumbnail {
+    max-width: 180px;
+} 
+
+.thumb-container .track-name {
+    text-align: center;
 }
