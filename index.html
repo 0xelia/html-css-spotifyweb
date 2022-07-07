@@ -13,7 +13,7 @@
 </head>
 <body>
    <main class="main-section">
-       <header class="sidebar">
+       <header class="sidebar"> <!-- Sidebar-->
             <div class="row column">
                 <div class="col">
                     <figure class="logo">
@@ -22,7 +22,7 @@
                     </figure>
                 </div>
                 <div class="col">
-                    <ul class="nav">
+                    <ul class="nav"> <!--Navbar della sidebar-->
                         <li class="pointer">
                             <a href="#">
                                 <i class="icon">
@@ -72,16 +72,17 @@
                     <div class="sidebar-footer">
                         <div class="download">
                             <img src="img/download.svg" alt="">
-                            Installa l'app
+                            <span>Installa l'app </span>  
                         </div>
                         <div class="login">
                             <img src="img/profile.svg" alt="">
-                            John Doe
+                            <span>Jonh Doe</span>
                         </div>
                     </div>
                 </div>
             </div>
        </header>
+
        <section class="library">
            <div class="header-library">
 
@@ -90,9 +91,67 @@
                content library
            </div>       
        </section>
-   </main>
-   <aside class="toolbar">
 
+   </main>
+
+   <!-- TOOLBAR -->
+   <aside class="toolbar">
+        <div class="row">
+
+            <div class="col flex">
+                <div class="track flex">
+                    <div class="track-thumb">
+                        <figure>
+                            <img src="img/sinister.jpeg" alt="" class="thumb-small">
+                        </figure>
+                    </div>
+                    <div class="track-name">
+                        <strong>Sinister</strong><br><span> Nome Brano</span>
+                    </div>
+                </div>
+                <div class="icons flex">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+            </div>
+
+            <div class="col flex column center">
+                <div class="player">
+                    <div class="icons flex center">
+                        <i class="fa-solid fa-shuffle"></i>
+                        <i class="fa-solid fa-backward-step"></i>
+                        <i class="fa-regular fa-circle-play"></i>
+                        <i class="fa-solid fa-forward-step"></i>
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </div>
+                    
+                </div>
+                <div class="duration flex center">
+                    <span>0:25</span>
+                    <div class="bar-container">
+                        <div class="bar-item"></div>
+                    </div>
+                    <span>4:35</span>
+                </div>
+                
+            </div>
+
+            <div class="col flex">
+                <div class="icons flex">
+                    <i class="fa-solid fa-list-ul"></i>
+                    <i class="fa-solid fa-display"></i>
+                    <i class="fa-solid fa-volume-high"></i>
+                </div>
+
+                <div class="duration flex">
+                    <div class="bar-container">
+                        <div class="bar-item">
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+        </div>
    </aside>
 </body>
 </html>

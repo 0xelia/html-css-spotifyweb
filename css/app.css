@@ -38,6 +38,13 @@ ul, ol, li {
     flex-direction: column;
 }
 
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
 
 /* MAIN LAYOUT */
 
@@ -65,7 +72,6 @@ body {
 
 .toolbar {
     background-color: var(--toolbar-color);
-    padding: 2rem 0;
     /* position: fixed;
     left: 0;
     right: 0;
@@ -114,16 +120,17 @@ body {
         flex-basis: 80px;
     }
 
-    .sidebar .col {
+    .sidebar .col:nth-child(3) {
         display: none;
     }
-
-    .sidebar .col:first-child,
-    .sidebar .col:nth-child(2){
-        display: block;
+    .sidebar li,
+    .download,
+    .login {
+        text-align: center;
     }
-
-    .nav span {
+    .nav span,
+    .login span,
+    .download span {
         display: none;
     }
 
@@ -134,6 +141,14 @@ body {
     .sidebar .logo .logo-small {
         display: inline-block;
     }
+
+   .sidebar .col:last-child {
+       margin-top: auto;
+   }
+
+   .sidebar-footer .download {
+       border-bottom: solid black;
+   }
 }
 
 /* navbar della sidebar (header) */
@@ -216,3 +231,101 @@ body {
     padding-top: 0.4rem;
 }
 
+/* TOOLBAR */
+
+
+.toolbar .col:first-child,
+.toolbar .col:last-child {
+    align-items: center;
+}
+
+.toolbar .col {
+    padding: 10px;
+    align-items: center;
+    gap: 0.8rem;
+    f
+}
+
+
+.toolbar .col:nth-child(2) {
+    flex-grow: 3;
+}
+
+.toolbar .track-thumb .thumb-small {
+    height: 50px;
+    aspect-ratio: 1;
+}
+
+
+.track.flex {
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.track .track-name strong {
+    margin-bottom: 0;
+}
+.track .track-name span{
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.toolbar .icons {
+    gap: 10px;
+    color: gray;
+  }
+
+  .toolbar .col:last-child .icons {
+      color: white;
+  }
+
+  .bar-container {
+      width: 100px;
+      height: 3px;
+      border-radius: 999px;
+      background-color: gray;
+  }
+
+  .bar-item {
+    width: 30px;
+    height: 3px;
+    border-radius: 999px;
+    background-color: lightgrey;
+  }
+
+  .player .icons {
+      gap: 2rem;
+      padding-bottom: 0.2rem;
+      color: white;
+      font-size: 1.2rem;
+      align-items: baseline;
+  }
+
+  .player .icons i:nth-child(3) {
+      font-size: 1.8rem;
+  }
+
+.toolbar .col:nth-child(2) .bar-container {
+    width: 45%;
+    position: relative;
+}
+
+.toolbar .col:nth-child(2) .bar-container .bar-item {
+    width: 30%;
+}
+
+/* .toolbar .col:nth-child(2) .bar-container::before {
+    content: '0:25';
+    font-size: 0.8rem;
+    color: lightgray;
+    position: absolute;
+    left: -20%;
+    top: -9px;
+    padding-right: 5px;
+} */
+
+.duration {
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+}
