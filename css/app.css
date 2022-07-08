@@ -52,7 +52,7 @@ ul, ol, li {
     font-size: 1.5rem;
     padding: var(--bar-padding) 0;
     letter-spacing: 2px;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .paddsx {
@@ -134,7 +134,7 @@ body {
 
 
 /* SIDEBAR MOBILE */
-@media (max-width: 450px) {
+@media (max-width: 552px) {
     .sidebar {
         flex-basis: 80px;
     }
@@ -178,6 +178,11 @@ body {
 .sidebar .nav li {
     padding: 0.4rem var(--bar-padding);
     border-left: solid black 3px;
+    opacity: 0.6;
+}
+
+.sidebar .nav li:hover {
+    opacity: 1;
 }
 
 .sidebar .nav li:last-child {
@@ -193,21 +198,23 @@ body {
 
 .sidebar .nav li.pointer {
     border-left: solid lightgreen 3px;
+    opacity: 1;
 }
 
 
 /* playlist della sidebar */
 
-.sidebar .playlist {
+.playlist {
     padding-top: var(--padding-standard);
 }
 
-.playlist h4 {
+.sidebar .playlist h4 {
     padding-bottom: 0.5rem;
 }
 
 .create-list {
     margin-bottom: 1.2rem;
+    opacity: 0.6;
 }
 
 .create-list i {
@@ -219,6 +226,15 @@ body {
     line-height: 1.8rem;
     text-align: center;
     margin-right: 0.5rem;
+    opacity: 0.6;
+}
+
+.create-list:hover  {
+    opacity: 1;
+}
+
+.create-list li:hover {
+    opacity: 1;
 }
 
 .list-playlist li {
@@ -339,10 +355,14 @@ body {
 
 @media (max-width: 760px) {
 
+    .toolbar .track-thumb{
+        flex-shrink: 0;
+    }
+
     .toolbar .col.flex {
         flex-basis: 0;
         flex-grow: 1;
-        gap: 0;
+        gap: 0.8rem;
     }
     .toolbar .track-name {
         font-size: 0.8rem;
@@ -360,11 +380,11 @@ body {
     }
 
     .toolbar .col.center .icons {
-        gap: 0.8rem;
+        gap: 1rem;
     }
 
     .toolbar .col.center .player .icons i:nth-child(3) {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .toolbar .duration {
@@ -432,7 +452,26 @@ body {
 
 .thumbnail {
     max-width: 180px;
+    position: relative;
 } 
+
+.thumbnail .play-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 3rem;
+    display: none;
+}
+
+.thumbnail:hover .play-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .thumb-container .track-name {
     text-align: center;
