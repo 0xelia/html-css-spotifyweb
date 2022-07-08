@@ -55,6 +55,10 @@ ul, ol, li {
     font-weight: 400;
 }
 
+.paddsx {
+    padding-left: var(--bar-padding);
+}
+
 /* MAIN LAYOUT */
 
 body {
@@ -63,7 +67,7 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .main-section {
@@ -71,7 +75,6 @@ body {
     flex-grow: 1;
     display: flex;
     overflow: hidden;
-    max-height: calc( 100vh - 85px);
 }
 
 .main-section .library {
@@ -92,7 +95,7 @@ body {
     background-color: var(--header-color);
     flex-basis: 230px;
     flex-shrink: 0;
-    padding: var(--bar-padding);
+    /* padding: var(--bar-padding); */
     font-size: 0.9rem;
     line-height: 1.4rem;
     overflow: hidden;
@@ -106,6 +109,10 @@ body {
 
 /* SIDEBAR */
 
+
+.sidebar .logo {
+    padding-top: var(--bar-padding);
+}
 .sidebar .logo .logo-big {
     max-width: 160px;
     display: ;
@@ -117,11 +124,11 @@ body {
     display: none;
 }
 
-.sidebar .row {
+.sidebar .flex {
     height: 100%;
 }
 
-.sidebar .row .col:nth-child(3) {
+.sidebar .flex .col:nth-child(3) {
     flex-grow: 1;
 }
 
@@ -166,10 +173,11 @@ body {
 /* navbar della sidebar (header) */
 
 .sidebar .nav {
-    padding-top: var(--padding-standard);
+    padding-top: var(--bar-padding);
 }
 .sidebar .nav li {
-    padding: 0.4rem 0;
+    padding: 0.4rem var(--bar-padding);
+    border-left: solid black 3px;
 }
 
 .sidebar .nav li:last-child {
@@ -183,19 +191,10 @@ body {
     vertical-align: middle;
 }
 
-.sidebar .pointer {
-    position: relative;
+.sidebar .nav li.pointer {
+    border-left: solid lightgreen 3px;
 }
 
-.pointer ::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: -1rem;
-    height: 22px;
-    width: 3px;
-    background-color: greenyellow;
-}
 
 /* playlist della sidebar */
 
@@ -224,6 +223,10 @@ body {
 
 .list-playlist li {
     padding: 0.3rem 0;
+}
+
+.sidebar-footer {
+    padding: var(--bar-padding);
 }
 
 .download {
@@ -419,11 +422,12 @@ body {
     height: 3px;
     width: 50%;
     background-color: lightgreen;
-    margin: 0.5rem auto;
+    margin: 0.25rem auto;
 }
 
 .main-section .library-main  section .row {
-    gap: 0.8rem;
+    column-gap: 0.8rem;
+    row-gap: 0;
 }
 
 .thumbnail {
