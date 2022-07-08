@@ -71,6 +71,7 @@ body {
     flex-grow: 1;
     display: flex;
     overflow: hidden;
+    max-height: calc( 100vh - 85px);
 }
 
 .main-section .library {
@@ -431,4 +432,10 @@ body {
 
 .thumb-container .track-name {
     text-align: center;
+}
+
+.sub-title {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    padding-bottom: var(--bar-padding);
 }
