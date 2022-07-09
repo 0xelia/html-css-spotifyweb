@@ -179,6 +179,7 @@ body {
     padding: 0.4rem var(--bar-padding);
     border-left: solid black 3px;
     opacity: 0.6;
+    transition: all 200ms ease-in-out;
 }
 
 .sidebar .nav li:hover {
@@ -227,6 +228,7 @@ body {
     text-align: center;
     margin-right: 0.5rem;
     opacity: 0.6;
+    transition: all 200ms ease-in-out;
 }
 
 .create-list:hover  {
@@ -239,6 +241,12 @@ body {
 
 .list-playlist li {
     padding: 0.3rem 0;
+    opacity: 0.6;
+    transition: all 200ms ease-in-out;
+}
+
+.list-playlist li:hover {
+    opacity: 1;
 }
 
 .sidebar-footer {
@@ -247,7 +255,16 @@ body {
 
 .download {
     padding-bottom: 0.4rem;
-    border-bottom: solid white 1px;
+    border-bottom: solid rgba(255, 255, 255, 0.5) 1px;
+    color: var(--lighgrey-spotify);
+}
+
+.download:hover {
+    color: white;
+}
+
+.download:hover img {
+    opacity: 1;
 }
 
 .download img,
@@ -256,6 +273,7 @@ body {
     aspect-ratio: 1;
     vertical-align: middle;
     margin-right: 0.2rem;
+    opacity: 0.6;
 }
 
 .login {
@@ -300,6 +318,11 @@ body {
     color: var(--lighgrey-spotify);
 }
 
+.track-name span:hover {
+    text-decoration: underline;
+    color: white;
+}
+
 .toolbar .icons {
     gap: 10px;
     color: var(--lighgrey-spotify);
@@ -308,6 +331,10 @@ body {
 .toolbar .col:last-child .icons {
       color: white;
     }
+
+.toolbar .icons i:hover {
+        color: white;
+}
 
   .bar-container {
       width: 100px;
@@ -333,9 +360,16 @@ body {
 
   .player .icons i:nth-child(3) {
       font-size: 1.8rem;
+      transition: 200ms ease-in-out;
+  }
+
+
+  .player .icons i:nth-child(3):hover {
+      transform: scale(1.1);
   }
 
 .toolbar .col:nth-child(2) .bar-container {
+    max-width: 320px;
     width: 45%;
     position: relative;
 }
@@ -433,6 +467,11 @@ body {
     padding: 0.5rem 2rem;
     border: solid white 1px;
     border-radius: 999px;
+    transition: all 200ms ease-in-out;
+}
+
+.header-library .button:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 450px) {
@@ -442,6 +481,8 @@ body {
         font-size: 0.8rem;
     }
 }
+
+
 
 .library-main {
     padding: 0 var(--bar-padding);
@@ -454,6 +495,14 @@ body {
     color: var(--lighgrey-spotify);
     text-transform: uppercase;
     font-size: 0.85rem;
+}
+
+.menu-section .nav li {
+    transition: all 200ms ease-in-out;
+}
+
+.menu-section .nav li:hover {
+    color: white;
 }
 
 .menu-section .nav li:first-child  {
